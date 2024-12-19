@@ -43,6 +43,8 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun showContent(content: Content) {
+        if (isDestroyed) return
+
         imageView.isVisible = false
         textView.isVisible = false
 
